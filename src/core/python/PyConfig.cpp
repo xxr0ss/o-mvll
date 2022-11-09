@@ -36,18 +36,18 @@ void init_pythonpath() {
     return;
   }
   #if defined(__linux__)
-    if (auto* hdl = dlopen("libpython3.10.so", RTLD_LAZY)) {
-      char PATH[400];
-      int ret = dlinfo(hdl, RTLD_DI_ORIGIN, PATH);
-      if (ret != 0) {
-        return;
-      }
-      std::string PythonPath = PATH;
-      PythonPath.append("/python3.10");
-      Py_SetPath(Py_DecodeLocale(PythonPath.c_str(), nullptr));
-      setenv("PYTHONHOME", PythonPath.c_str(), true);
-      return;
-    }
+    // if (auto* hdl = dlopen("libpython3.10.so", RTLD_LAZY)) {
+    //   char PATH[400];
+    //   int ret = dlinfo(hdl, RTLD_DI_ORIGIN, PATH);
+    //   if (ret != 0) {
+    //     return;
+    //   }
+    //   std::string PythonPath = PATH;
+    //   PythonPath.append("/python3.10");
+    //   Py_SetPath(Py_DecodeLocale(PythonPath.c_str(), nullptr));
+    //   setenv("PYTHONHOME", PythonPath.c_str(), true);
+    //   return;
+    // }
   #endif
 }
 

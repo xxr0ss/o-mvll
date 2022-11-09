@@ -18,13 +18,13 @@ project(OMVLL
 message(STATUS "${PROJECT_NAME}: ${PROJECT_VERSION}")
 
 option(OMVLL_FORCE_LOG_DEBUG "Force the log debug output" OFF)
-option(OMVLL_PY_STANDALONE   "Build OMVLL as a standalone Python module" OFF)
+option(OMVLL_PY_STANDALONE   "Build OMVLL as a standalone Python module" ON)
 
-find_package(LLVM 14 REQUIRED CONFIG NO_DEFAULT_PATH)
-find_package(Clang REQUIRED CONFIG. NO_DEFAULT_PATH)
+find_package(LLVM 14 REQUIRED CONFIG)
+find_package(Clang REQUIRED CONFIG)
 
 find_package(spdlog REQUIRED CONFIG)
-find_package(pybind11 REQUIRED CONFIG NO_DEFAULT_PATH)
+find_package(pybind11 REQUIRED CONFIG)
 
 set(PYTHON_VERSION "3" CACHE STRING "Python version")
 find_package(Python3 COMPONENTS Development)

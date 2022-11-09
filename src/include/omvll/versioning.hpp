@@ -4,6 +4,14 @@
 #include <llvm/Config/llvm-config.h>
 #include "omvll/config.hpp"
 
+#ifndef LLVM_REVISION
+#define LLVM_REVISION "unknown"
+#endif
+
+#ifndef LLVM_REPOSITORY
+#define LLVM_REPOSITORY "unknown"
+#endif
+
 #define OMVLL_LLVM_VERSION        LLVM_REVISION
 #define OMVLL_LLVM_REPO           LLVM_REPOSITORY
 #define OMVLL_LLVM_MAJOR          LLVM_VERSION_MAJOR
