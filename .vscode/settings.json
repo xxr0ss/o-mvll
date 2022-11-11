@@ -1,0 +1,7 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}/src",
+    "cmake.environment": {
+        "LLVM_DIR": "/usr/lib/llvm-15/cmake",
+        "pybind11_DIR": "/usr/lib/cmake/pybind11"
+    }
+}

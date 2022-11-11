@@ -1,0 +1,20 @@
+{
+    "configurations": [
+    {
+        "type": "lldb",
+        "request": "launch",
+        "name": "Launch",
+        "program": "clang++",
+        "args": [
+            "-fpass-plugin=./build/omvll.so",
+            "./test/main.cpp",
+            "-o",
+            "./test/main"
+        ],
+        "env": {
+            "OMVLL_CONFIG": "./test/omvll_config.py"
+        },
+        "cwd": "${workspaceFolder}"
+    }
+    ]
+}
